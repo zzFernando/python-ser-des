@@ -1,4 +1,4 @@
-from pykson import Pykson,JsonObject, IntegerField, StringField, ObjectListField, DateField, ListField
+from pykson import Pykson,JsonObject, IntegerField, StringField, DateField, ListField
 import pickle
 
 
@@ -11,6 +11,7 @@ class Cliente(JsonObject):
     bairro = StringField()
     cidade = StringField()
     estado = StringField()
+    pais = StringField()
     profissao = StringField()
     score = ListField(int)
     tags = ListField(str)
@@ -25,9 +26,10 @@ teste = Cliente(
     bairro='Aquele',
     cidade='Porto Alegre',
     estado='RS',
+    pais='brasil',
     profissao='Estudante',
-    score = [10, 8, 9],
-    tags = ['aluno', 'bom', 'aprovado'],
+    score=[10, 8, 9],
+    tags=['aluno', 'bom', 'aprovado'],
 
 )
 #Serialize
